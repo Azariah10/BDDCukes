@@ -56,7 +56,13 @@ public class LoginHQUserPagePanel extends BaseClass
 		Assert.assertEquals(actualMsg1, str);
 		
 	}
-	
+
+	public void validateFailedLogin(String str){
+
+		String actualMsg = loginHQUserPage.validationMsg.getText();
+		Assert.assertEquals(actualMsg, str);
+
+	}
 	
 
 }

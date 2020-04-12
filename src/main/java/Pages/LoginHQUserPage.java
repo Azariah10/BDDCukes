@@ -34,4 +34,7 @@ public class LoginHQUserPage
 	
 	@FindBy (xpath = "//img")
 	public WebElement logo;
+
+	@FindBy (xpath = "//p[@id='error_box']")
+	public WebElement validationMsg;
 }

@@ -9,16 +9,15 @@ import org.apache.logging.log4j.Logger;
 import PagePanel.LoginHQUserPagePanel;
 import Resource.*;
 
-public class LoginHQUserStep extends BaseClass 
-{
+public class LoginHQUserStep extends BaseClass {
 	LoginHQUserPagePanel loginHQUserPagePanel = new LoginHQUserPagePanel();
 	Hooks hooks = new Hooks();
 	
 
 	public static Logger log = LogManager.getLogger(StepDefinition.class);
 	
-	@Given("^Login to Concerete App as HQUser with \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void login_to_Concerete_App_as_HQUser_with_and(String username, String password) throws Throwable 
+	@Given("^Login to Concerete App as User with \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void login_to_Concerete_App_as_User_with_and(String username, String password) throws Throwable
 	{
 		loginHQUserPagePanel.enterUserName(username);
 		Thread.sleep(3000);
@@ -65,6 +64,11 @@ public class LoginHQUserStep extends BaseClass
 		Thread.sleep(3000);
 		loginHQUserPagePanel.validateLogout(expectedMsg);	 
 		System.out.println("Validated logout msg");
+	}
+
+	@Then("^Verify the Failed Login with \"([^\"]*)\"$")
+	public void verify_the_Failed_Login_with(String expMsg) throws Throwable {
+      loginHQUserPagePanel.validateFailedLogin(expMsg);
 	}
 
 }
