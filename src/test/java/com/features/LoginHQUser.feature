@@ -1,5 +1,6 @@
 Feature: Test Login Functionality.
 
+  @Regression
   Scenario Outline: Verify Concrete login/logout with Valid credentials One-3671.
     Given Login to Concerete App as User with "<username>" and "<password>"
     When User navigate to Dashboard
@@ -9,11 +10,12 @@ Feature: Test Login Functionality.
 
     Examples:
       | username               | password          | expectedMsg                                                    |
-      | portiahendrix@concrete.cc | gate.tomatoes.Imj | You have been logged out of Concrete! Please close this window |
+      |portiahendrix@concrete.cc|gate.tomatoes.Imj|You have been logged out of Concrete! Please close this window |
       |joanngrayson@concrete.cc|gate.tomatoes.ESv|You have been logged out of Concrete! Please close this window |
-      |shoepeoplestore051@concrete.cc| gate.tomatoes.WUY|You have been logged out of Concrete! Please close this window |
+      |shoepeoplestore051@concrete.cc|gate.tomatoes.WUY|You have been logged out of Concrete! Please close this window |
 
 
+  @Regression
   Scenario Outline: Verify Concrete login with Invalid Credentials One-3671.
     Given Login to Concerete App as User with "<username>" and "<password>"
     Then Verify the Failed Login with "<expectedMsg>"

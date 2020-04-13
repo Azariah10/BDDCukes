@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cucumber" />
+        <module name="CucumberFramework" />
         <module name="Concrete-Cucumber-Framework" />
+        <module name="Cucumber" />
       </profile>
     </annotationProcessing>
   </component>

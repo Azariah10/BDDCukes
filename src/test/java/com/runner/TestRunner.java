@@ -7,15 +7,14 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-      features = "src/test/java/com/features/LoginHQUser.feature",
+      features = "src/test/java/com/features",
       glue= {"StepDefinition"},
       plugin = {"com.cucumber.listener.ExtentCucumberFormatter:"},
       format = {"pretty", "html:target/htmlreports"},
       monochrome = true,
       strict = false,
-      dryRun = false
-      //tags = {"~@Sanity", "~@Regression", "~@Smoke"}
-
+      dryRun = false,
+      tags = {"@Smoke", "~@Regression"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {

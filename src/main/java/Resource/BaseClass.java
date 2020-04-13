@@ -18,7 +18,7 @@ public class BaseClass {
     public WebDriver initializeDriver() throws IOException, IOException {
 
         prop = new Properties();
-        FileInputStream fis = new FileInputStream(".\\src\\main\\java\\resource\\data.properties");
+        FileInputStream fis = new FileInputStream("/Users/paulosegun/IdeaProjects/test2/src/main/java/Resource/data.properties");
         prop.load(fis);
 
         String browserName = prop.getProperty("browser");
