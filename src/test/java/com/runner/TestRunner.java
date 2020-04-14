@@ -13,8 +13,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
       format = {"pretty", "html:target/htmlreports"},
       monochrome = true,
       strict = false,
-      dryRun = false,
-      tags = {"@Smoke", "~@Regression"}
+      dryRun = false
+     // tags = {"~@Smoke", "@Regression"}
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {

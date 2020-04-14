@@ -7,7 +7,7 @@ public class RetryTestCases implements IRetryAnalyzer{
 		
 		private int retryCnt = 0;
 	  
-	    private int maxRetryCnt = 0;
+	    private int maxRetryCnt = 1;
 	    
 	    public boolean retry(ITestResult result) {
 	        if (retryCnt < maxRetryCnt) {
